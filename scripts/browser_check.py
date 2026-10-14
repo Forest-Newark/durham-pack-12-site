@@ -9,11 +9,11 @@ import os
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "screenshots"
 OUTPUT.mkdir(exist_ok=True)
-handler = partial(SimpleHTTPRequestHandler, directory=str(ROOT / "dist"))
+handler = partial(SimpleHTTPRequestHandler, directory=str(ROOT))
 server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
 Thread(target=server.serve_forever, daemon=True).start()
-# Include the repository subpath so Pages relative URL behavior is tested.
-base = f"http://127.0.0.1:{server.server_port}"
+# Serve from a non-root path to exercise GitHub Pages project-site relative URLs.
+base = f"http://127.0.0.1:{server.server_port}/dist/"
 errors = []
 try:
     with sync_playwright() as playwright:
