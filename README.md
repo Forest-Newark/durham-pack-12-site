@@ -12,7 +12,7 @@ python scripts/check.py
 python -m http.server 8000 --directory dist
 ```
 
-Open http://localhost:8000 in Chrome. The full build includes all original images, PDFs, and redesigned photo pages. Open `dist/preview.html` directly for a single-file homepage preview; that file uses original-site images and document destinations and needs internet. Use the full build to review the redesigned photo and resource pages.
+Open http://localhost:8000 in Chrome. For an immediate preview without downloading assets, run `python scripts/local_preview.py` and open `preview/index.html` in Chrome. All modern HTML pages work locally; images and PDFs load from the original host. The full build includes all original images, PDFs, and redesigned photo pages. Open `dist/preview.html` directly for a single-file homepage preview; that file uses original-site images and document destinations and needs internet. Use the full build to review the redesigned photo and resource pages.
 
 ## GitHub Pages
 
@@ -54,7 +54,7 @@ Small-screen body text is at least 16px. Navigation has 44px touch targets. Grap
 
 ## Validation
 
-`scripts/audit_source.py` crawls the full reachable original navigation, image links, frames, and linked PDFs. It preserves downloaded source bytes and extracts PDF destinations for review. CI fails on source-fetch issues rather than silently omitting them.
+`scripts/audit_source.py` crawls the full reachable original navigation, image links, frames, and linked PDFs. It preserves downloaded source bytes, extracts PDF destinations, and records HTTP availability and redirects for external links. A provider that blocks automated requests is reported rather than silently replaced. CI fails on source-fetch issues rather than silently omitting them.
 
 `scripts/check.py` verifies every local link, anchor, legacy page route, original image, original per-page destination, and asset hash. It compares the implementation with both the tracked inventory and a fresh source crawl, so future source additions are caught.
 

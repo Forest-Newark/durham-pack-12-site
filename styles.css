@@ -97,3 +97,5 @@ nav{font-size:.9rem}
 .photo-tile:hover{border-color:var(--forest)}
 @media(max-width:1000px){.about-resources{grid-template-columns:1fr}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.resource-grid{grid-template-columns:1fr;gap:22px}.resource-card{padding:24px}.album-teaser{grid-template-columns:1fr;gap:25px;padding:24px}.photo-grid{grid-template-columns:1fr}.photo-tile img{max-height:350px}.gallery-photo img{max-height:none}.photo-controls{display:flex}.photo-controls .button{flex:1 1 calc(50% - 15px);justify-content:center}.resource-link{line-height:1.6}}
+
+@media(max-width:760px){.photo-controls .button{font-size:1rem}}

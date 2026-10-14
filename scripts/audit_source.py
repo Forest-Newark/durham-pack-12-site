@@ -1,5 +1,6 @@
 """Inventory every reachable original page, navigation link, image, and PDF destination."""
 from collections import deque
+from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 from io import BytesIO
 from pathlib import Path
@@ -75,6 +76,23 @@ def get(url):
                 raise
             time.sleep(1 + attempt)
 
+def probe(url):
+    try:
+        request = Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0 Pack12-Link-Audit"})
+        with urlopen(request, timeout=20) as response:
+            return {"url": url, "status": response.status, "final_url": response.geturl()}
+    except HTTPError as error:
+        if error.code in (403, 405):
+            try:
+                request = Request(url, headers={"User-Agent": "Mozilla/5.0 Pack12-Link-Audit", "Range": "bytes=0-127"})
+                with urlopen(request, timeout=20) as response:
+                    return {"url": url, "status": response.status, "final_url": response.geturl()}
+            except Exception as retry_error:
+                return {"url": url, "status": getattr(retry_error, "code", None), "error": str(retry_error)}
+        return {"url": url, "status": error.code, "error": str(error)}
+    except Exception as error:
+        return {"url": url, "status": None, "error": str(error)}
+
 def audit():
     queue = deque([ORIGIN, "https://www.pack12durham.org/"])
     visited = set()
@@ -145,7 +163,15 @@ def audit():
         except Exception as error:
             failures.append({"url": url, "error": str(error)})
             print("SOURCE ASSET ISSUE", url, str(error))
-    report = {"origin": ORIGIN, "pages": pages, "links": links,
+    external_urls = sorted({item["url"] for item in links
+                            if item["tag"] in ("a", "area", "pdf-link")
+                            and urlsplit(item["url"]).scheme in ("http", "https")
+                            and urlsplit(item["url"]).hostname not in HOSTS})
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        external_status = list(pool.map(probe, external_urls))
+    for result in external_status:
+        print("EXTERNAL LINK CHECK", json.dumps(result, ensure_ascii=False))
+    report = {"external_status": external_status, "origin": ORIGIN, "pages": pages, "links": links,
               "assets": asset_urls, "asset_records": records, "fetch_issues": failures}
     (archive / "inventory.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     if not pages:

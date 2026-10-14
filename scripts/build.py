@@ -76,6 +76,7 @@ def build():
     preview = preview.replace('<link rel="stylesheet" href="./styles.css">',
                               "<style>\n" + (ROOT / "styles.css").read_text(encoding="utf-8") + "\n</style>")
     preview = preview.replace('./pics/', ORIGIN + 'pics/')
+    preview = preview.replace('./PhotoBook/index.html', ORIGIN + 'PhotoBook/pf1.html')
     preview = preview.replace('./PhotoBook/', ORIGIN + 'PhotoBook/')
     preview = preview.replace('./aboutCubScouting.html', ORIGIN + 'aboutCubScouting.html')
     preview = preview.replace('href="./RegistrationInstructions_2024_08_04.pdf"',
