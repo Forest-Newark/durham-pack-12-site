@@ -1,10 +1,10 @@
 # Durham Pack 12 website
 
-A modern, responsive GitHub Pages proof of concept for Pack 12 in Durham, NC. Plain HTML and CSS; no runtime dependencies, tracking, or JavaScript needed. Keyboard navigation and native expandable FAQs work at all screen sizes.
+A modern, responsive GitHub Pages proof of concept for Pack 12 in Durham, NC. Plain HTML and CSS, with no runtime JavaScript, tracking, or frontend dependencies.
 
-## Preview locally
+## Local Chrome preview
 
-Requires Python 3.11 or newer and an internet connection for the initial asset download:
+Requires Python 3.11 or newer and internet for the initial asset download:
 
 ```sh
 python scripts/build.py
@@ -12,57 +12,67 @@ python scripts/check.py
 python -m http.server 8000 --directory dist
 ```
 
-Open http://localhost:8000 in Chrome. For a single-file preview, open `dist/preview.html` directly in Chrome (that preview loads the original images from pack12durham.org, so it needs internet). The full `dist/index.html` uses the preserved local assets.
+Open http://localhost:8000 in Chrome. The full build includes all original images, PDFs, and redesigned photo pages. Open `dist/preview.html` directly for a single-file homepage preview; that file uses original-site images and document destinations and needs internet. Use the full build to review the redesigned photo and resource pages.
 
 ## GitHub Pages
 
 1. Merge the proof-of-concept PR into `main`.
-2. In repository **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
-3. Run **Check and deploy Pack 12 Pages** from the Actions tab if the first deployment ran before Pages was enabled.
+2. Set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
+3. If the first deployment ran before Pages was enabled, run **Check and deploy Pack 12 Pages** from Actions.
 
-The expected address is https://forest-newark.github.io/durham-pack-12-site/ once Pages is enabled and deployment succeeds. No custom domain is configured. Relative paths support the repository subpath.
+Expected address after successful deployment: https://forest-newark.github.io/durham-pack-12-site/. No custom domain is configured. All internal links support the repository subpath.
 
-Every PR builds a downloadable `pack12-preview` artifact with the standalone preview, the full site, and mobile/tablet/desktop screenshots. PRs do not deploy. Main pushes deploy only after source and browser checks pass.
+PRs run validation without deployment. The downloadable `pack12-preview` artifact includes the full build, standalone homepage preview, screenshots, source crawl, and link inventory.
 
-## Content and assets
+## Full original-site preservation
 
-Source: https://pack12durham.org/, inspected October 14, 2026.
+Source audited October 14, 2026: https://pack12durham.org/.
 
-The original homepage's content is retained and reorganized: girls and boys grades K–5; “A Pack for All People”; new games, friends, and skills; hiking, archery, camping, s’mores, cooking, family activities, life skills, and character development; September–May meetings on the first three Tuesdays at 6:30 pm; Yates Baptist Church, 2819 Chapel Hill Rd., next to Rogers-Herr Middle School; the September 8 or 15, 2026 welcome dates; both leader email addresses; the original registration PDF and Scouting program link.
+The audit reads HTML rather than relying on a search engine's text view. That captures the original CSS-rendered navigation as well as ordinary links. The complete reachable site includes the homepage, About Cub Scouting, and 12 photo viewer pages. Both original hostnames and the home/index.html aliases are checked.
 
-The September welcome dates are explicitly historical. The August 2024 registration guide remains available in full, including English and Spanish pages and its embedded destinations; its fees are not presented as current. Families are directed to leaders for current details.
+- Homepage content, meeting information, email addresses, registration PDF, and Scouting program destination are retained.
+- Calendar: `pics/Calendar_2026_08_19.pdf`.
+- Den leader help: `pics/DenLeaderHelp2026_08_28.pdf`.
+- Parent information: `pics/PIP_EN_2026_08_23.pdf` and `pics/PIP_ES_2026_08_23.pdf`.
+- FAQs: `pics/FAQ_EN_2026_08_24.pdf` and `pics/FAQ_ES_2026_08_24.pdf`.
+- About Cub Scouting retains all three original external resource links, including the exact leader-book URL.
+- All 12 photo viewer routes keep their original `PhotoBook/pf*.html` filenames, original photographs, Home links, and original previous/next destinations. A new album overview provides direct access to every photo. Original navigation quirks are retained rather than silently changing their destinations.
+- All 15 original images and 7 original PDFs are downloaded unchanged. PDFs retain their complete content, embedded links, and bilingual pages.
+- The online registration destination found inside the original PDF is also surfaced as a direct homepage link.
 
-Build downloads preserve these exact original bytes without cropping or modification:
+September 8 and 15, 2026 welcome dates are explicitly historical. The registration guide is dated August 2024, so families are directed to leaders for current costs and instructions. The current resource documents retain their original 2026 publication dates. Older, search-indexed 2024 FAQs and the 2025–2026 calendar are not substituted for the current live navigation documents.
 
-- `pics/ScoutMeIn.png`
-- `pics/EstamosListos.png`
-- `pics/Pack12Cubs_Color.png`
-- `RegistrationInstructions_2024_08_04.pdf`
+`content/source-inventory.json` records the discovered source pages and destinations. The build creates `asset-sources.json` with source URLs, sizes, and SHA-256 hashes. `link-coverage.json` maps every original page link/image to its migrated route.
 
-`dist/asset-sources.json` records the source URL, size, and SHA-256 of each file. Production image and download requests are local to Pages. The original PDF URL, program URL, and email destinations are retained. Directions and a preserved PDF download are additional conveniences. The build fails if an asset cannot be fetched or its format is invalid; it never silently substitutes an image. Preserve a downloaded build artifact if the original site is later retired.
+## Visual inspiration and readability
 
-## Visual inspiration
+References: [Discover Durham](https://www.discoverdurham.com/), [Durham Central Park](https://durhamcentralpark.org/), [Durham Parks & Recreation](https://www.dprplaymore.org/), [Durham Cub Scout Pack 461](https://www.cubpack461.org/), and [Durham Pack 495](https://www.durhampack495.org/).
 
-- [Discover Durham](https://www.discoverdurham.com/): expressive headings, generous spacing, and a strong sense of place.
-- [Durham Central Park](https://durhamcentralpark.org/): welcoming community feel and clear visitor information.
-- [Durham Parks & Recreation](https://www.dprplaymore.org/): practical meeting and location information.
-- [Durham Cub Scout Pack 461](https://www.cubpack461.org/): prominent join invitation and grouped outdoor, skills, and friendship benefits.
-- [Durham Pack 495](https://www.durhampack495.org/): family focus and scannable quick information.
+The original design uses forest green, navy text, warm gold, cream backgrounds, serif headings, and vector illustrations. No reference-site photographs or copy are reused.
 
-Original design uses forest green, navy text, warm gold, cream backgrounds, serif headings, and small decorative SVG activity illustrations. Reference-site images and copy are not reused.
+Small-screen body text is at least 16px. Navigation has 44px touch targets. Graphics stack vertically and can open at full size. Raster images are never stretched past native dimensions. The “Do Your Best” badge is a large, unrotated SVG with vector lettering. Keyboard skip links, native expandable FAQs, and reduced-motion support are included.
 
 ## Validation
 
-`scripts/check.py` checks retained content and destinations, local files, unique IDs, anchor destinations, image descriptions, and preservation hashes. To run browser checks:
+`scripts/audit_source.py` crawls the full reachable original navigation, image links, frames, and linked PDFs. It preserves downloaded source bytes and extracts PDF destinations for review. CI fails on source-fetch issues rather than silently omitting them.
+
+`scripts/check.py` verifies every local link, anchor, legacy page route, original image, original per-page destination, and asset hash. It compares the implementation with both the tracked inventory and a fresh source crawl, so future source additions are caught.
+
+For the full audit and browser checks:
 
 ```sh
-python -m pip install playwright==1.55.0
+python -m pip install pypdf==6.1.1 playwright==1.55.0
+python scripts/audit_source.py
+python scripts/build.py
+python scripts/check.py
 python -m playwright install chromium
 python scripts/browser_check.py
 ```
 
-Chromium checks 360, 390, 768, and 1440 pixel viewports at 2× display density for horizontal overflow, image loading without enlargement beyond native dimensions, mobile text sizes, keyboard skip navigation, menu links, and expandable FAQs, and writes full-page screenshots to `screenshots/`. Reduced-motion preferences are respected. Small-screen body text is at least 16px, navigation has 44px touch targets, welcome graphics stack into one column with full-size links, and decorative badges do not obscure original artwork.
+Chromium checks phone, tablet, and desktop viewports at 2× display density for horizontal overflow, native-size image rendering, readable text, keyboard navigation, resource downloads, and photo navigation. Screenshots are written to `screenshots/`.
+
+External links keep their original destinations. Login, registration submissions, and authenticated Scout services remain with their original providers; no credentials or registrations are submitted by the checks.
 
 ## Editing
 
-Edit `index.html` for content and `styles.css` for layout and color. Before publishing as the pack's official site, confirm meeting details and current registration information with pack leadership.
+Edit `index.html`, `aboutCubScouting.html`, and `PhotoBook/*.html` for content, and `styles.css` for layout. Rebuild to refresh the original asset copies. Preserve a build artifact if the original site is later retired.

@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from pypdf import PdfReader
 import json
+import hashlib
 import re
 import time
 
@@ -77,7 +78,7 @@ def get(url):
 def audit():
     queue = deque([ORIGIN, "https://www.pack12durham.org/"])
     visited = set()
-    pages, links, assets, failures = [], [], [], []
+    pages, links, assets, failures, records = [], [], [], [], []
     archive = ROOT / "source-audit"
     archive.mkdir(exist_ok=True)
     while queue:
@@ -115,14 +116,20 @@ def audit():
                     queue.append(item["url"])
                 elif suffix in (".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".doc", ".docx", ".ics"):
                     assets.append(item["url"])
-    for url in sorted(set(assets)):
+    asset_urls = sorted({url.replace("://www.pack12durham.org/", "://pack12durham.org/") for url in assets})
+    for url in asset_urls:
         try:
             content, kind, final_url = get(url)
+            asset_path = urlsplit(url).path.lstrip("/")
+            destination = archive / "assets" / asset_path
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(content)
+            records.append({"url": url, "path": asset_path, "sha256": hashlib.sha256(content).hexdigest(), "bytes": len(content)})
             print("SOURCE ASSET OK", url, len(content), kind)
             if urlsplit(url).path.lower().endswith(".pdf"):
                 reader = PdfReader(BytesIO(content))
                 for number, page in enumerate(reader.pages, 1):
-                    destinations = set(re.findall(r"https?://[^\s<>]+", page.extract_text() or ""))
+                    destinations = {uri.rstrip(".,;:)]}") for uri in re.findall(r"https?://[^\s<>]+", page.extract_text() or "")}
                     for annotation in page.get("/Annots", []):
                         obj = annotation.get_object()
                         action = obj.get("/A")
@@ -139,7 +146,7 @@ def audit():
             failures.append({"url": url, "error": str(error)})
             print("SOURCE ASSET ISSUE", url, str(error))
     report = {"origin": ORIGIN, "pages": pages, "links": links,
-              "assets": sorted(set(assets)), "fetch_issues": failures}
+              "assets": asset_urls, "asset_records": records, "fetch_issues": failures}
     (archive / "inventory.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     if not pages:
         raise RuntimeError("No source pages were fetched; audit is incomplete.")

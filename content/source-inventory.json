@@ -1,0 +1,962 @@
+{
+  "inspected": "2026-10-14",
+  "origin": "https://pack12durham.org/",
+  "pages": [
+    "https://pack12durham.org/",
+    "https://pack12durham.org/aboutCubScouting.html",
+    "https://pack12durham.org/PhotoBook/pf1.html",
+    "https://pack12durham.org/index.html",
+    "https://pack12durham.org/PhotoBook/pf2.html",
+    "https://pack12durham.org/PhotoBook/pf3.html",
+    "https://pack12durham.org/PhotoBook/pf4.html",
+    "https://pack12durham.org/PhotoBook/pf5.html",
+    "https://pack12durham.org/PhotoBook/pf8.html",
+    "https://pack12durham.org/PhotoBook/pf9.html",
+    "https://pack12durham.org/PhotoBook/pf10.html",
+    "https://pack12durham.org/PhotoBook/pf11.html",
+    "https://pack12durham.org/PhotoBook/pf13.html",
+    "https://pack12durham.org/PhotoBook/pf14.html",
+    "https://pack12durham.org/PhotoBook/pf16.html"
+  ],
+  "links": [
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/Calendar_2026_08_19.pdf",
+      "url": "https://pack12durham.org/pics/Calendar_2026_08_19.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./aboutCubScouting.html",
+      "url": "https://pack12durham.org/aboutCubScouting.html",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/DenLeaderHelp2026_08_28.pdf",
+      "url": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/PIP_EN_2026_08_23.pdf",
+      "url": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/PIP_ES_2026_08_23.pdf",
+      "url": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/FAQ_EN_2026_08_24.pdf",
+      "url": "https://pack12durham.org/pics/FAQ_EN_2026_08_24.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/FAQ_ES_2026_08_24.pdf",
+      "url": "https://pack12durham.org/pics/FAQ_ES_2026_08_24.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./PhotoBook/pf1.html",
+      "url": "https://pack12durham.org/PhotoBook/pf1.html",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/ScoutMeIn.png",
+      "url": "https://pack12durham.org/pics/ScoutMeIn.png",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/EstamosListos.png",
+      "url": "https://pack12durham.org/pics/EstamosListos.png",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "RegistrationInstructions_2024_08_04.pdf",
+      "url": "https://pack12durham.org/RegistrationInstructions_2024_08_04.pdf",
+      "label": "Click here for registration information",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/Pack12Cubs_Color.png",
+      "url": "https://pack12durham.org/pics/Pack12Cubs_Color.png",
+      "label": "",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "mailto:committeechair@pack12durham.org",
+      "url": "mailto:committeechair@pack12durham.org",
+      "label": "committeechair@pack12durham.org",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "cubmaster@pack12durham.org",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "url": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "label": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "page": "https://pack12durham.org/"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "url": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "label": "The Cub Scout Program",
+      "page": "https://pack12durham.org/aboutCubScouting.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "https://www.scouting.org/programs/cub-scouts/leader-resources/pack-committee-resources/",
+      "url": "https://www.scouting.org/programs/cub-scouts/leader-resources/pack-committee-resources/",
+      "label": "Pack Leadership Resources",
+      "page": "https://pack12durham.org/aboutCubScouting.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "https://filestore.scouting.org/filestore/cubscouts/pdf/33221(24)%20Cub%20Scout%20Leader%20Book.pdf?_gl=1*dkuejv*_gcl_au*NzYyMDYyNDUwLjE3NjI4Mjg1NDg.*_ga*MTE2NDE0MTQwNC4xNjYzMzMxMDE2*_ga_20G0JHESG4*czE3Njk1NDQ1MzEkbzQ5MCRnMSR0MTc2OTU0NTAyNSRqMiRsMCRoMA..&_ga=2.94821978.795068935.1769446632-1164141404.1663331016",
+      "url": "https://filestore.scouting.org/filestore/cubscouts/pdf/33221(24)%20Cub%20Scout%20Leader%20Book.pdf?_gl=1*dkuejv*_gcl_au*NzYyMDYyNDUwLjE3NjI4Mjg1NDg.*_ga*MTE2NDE0MTQwNC4xNjYzMzMxMDE2*_ga_20G0JHESG4*czE3Njk1NDQ1MzEkbzQ5MCRnMSR0MTc2OTU0NTAyNSRqMiRsMCRoMA..&_ga=2.94821978.795068935.1769446632-1164141404.1663331016",
+      "label": "Cub Scout Leader Book download",
+      "page": "https://pack12durham.org/aboutCubScouting.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "",
+      "page": "https://pack12durham.org/aboutCubScouting.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/3OnBridge.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/3OnBridge.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf1.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pf2.html",
+      "url": "https://pack12durham.org/PhotoBook/pf2.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf1.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "next image Home",
+      "page": "https://pack12durham.org/PhotoBook/pf1.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/Calendar_2026_08_19.pdf",
+      "url": "https://pack12durham.org/pics/Calendar_2026_08_19.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./aboutCubScouting.html",
+      "url": "https://pack12durham.org/aboutCubScouting.html",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/DenLeaderHelp2026_08_28.pdf",
+      "url": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/PIP_EN_2026_08_23.pdf",
+      "url": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/PIP_ES_2026_08_23.pdf",
+      "url": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/FAQ_EN_2026_08_24.pdf",
+      "url": "https://pack12durham.org/pics/FAQ_EN_2026_08_24.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./pics/FAQ_ES_2026_08_24.pdf",
+      "url": "https://pack12durham.org/pics/FAQ_ES_2026_08_24.pdf",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "./PhotoBook/pf1.html",
+      "url": "https://pack12durham.org/PhotoBook/pf1.html",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/ScoutMeIn.png",
+      "url": "https://pack12durham.org/pics/ScoutMeIn.png",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/EstamosListos.png",
+      "url": "https://pack12durham.org/pics/EstamosListos.png",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "RegistrationInstructions_2024_08_04.pdf",
+      "url": "https://pack12durham.org/RegistrationInstructions_2024_08_04.pdf",
+      "label": "Click here for registration information",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "pics/Pack12Cubs_Color.png",
+      "url": "https://pack12durham.org/pics/Pack12Cubs_Color.png",
+      "label": "",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "mailto:committeechair@pack12durham.org",
+      "url": "mailto:committeechair@pack12durham.org",
+      "label": "committeechair@pack12durham.org",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "cubmaster@pack12durham.org",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "url": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "label": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/",
+      "page": "https://pack12durham.org/index.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/3Cubs.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/3Cubs.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf2.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf1.html",
+      "url": "https://pack12durham.org/PhotoBook/pf1.html",
+      "label": "previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf2.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf3.html",
+      "url": "https://pack12durham.org/PhotoBook/pf3.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf2.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf2.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/BikeSafety.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/BikeSafety.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf3.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf2.html",
+      "url": "https://pack12durham.org/PhotoBook/pf2.html",
+      "label": "previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf3.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf4.html",
+      "url": "https://pack12durham.org/PhotoBook/pf4.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf3.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf3.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Campfire.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Campfire.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf4.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf2.html",
+      "url": "https://pack12durham.org/PhotoBook/pf2.html",
+      "label": "previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf4.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf5.html",
+      "url": "https://pack12durham.org/PhotoBook/pf5.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf4.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf4.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Compass.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Compass.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf5.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf4.html",
+      "url": "https://pack12durham.org/PhotoBook/pf4.html",
+      "label": "previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf5.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf8.html",
+      "url": "https://pack12durham.org/PhotoBook/pf8.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf5.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf5.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/CubsHi5.png",
+      "url": "https://pack12durham.org/PhotoBook/images/CubsHi5.png",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf8.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf5.html",
+      "url": "https://pack12durham.org/PhotoBook/pf5.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf8.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf9.html",
+      "url": "https://pack12durham.org/PhotoBook/pf9.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf8.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf8.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Pals.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Pals.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf9.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf8.html",
+      "url": "https://pack12durham.org/PhotoBook/pf8.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf9.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf10.html",
+      "url": "https://pack12durham.org/PhotoBook/pf10.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf9.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf9.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Pinewood.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Pinewood.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf10.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf9.html",
+      "url": "https://pack12durham.org/PhotoBook/pf9.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf10.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf11.html",
+      "url": "https://pack12durham.org/PhotoBook/pf11.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf10.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf10.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/PinewoodTrack.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/PinewoodTrack.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf11.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf10.html",
+      "url": "https://pack12durham.org/PhotoBook/pf10.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf11.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf13.html",
+      "url": "https://pack12durham.org/PhotoBook/pf13.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf11.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf11.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Salute.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Salute.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf13.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf11.html",
+      "url": "https://pack12durham.org/PhotoBook/pf11.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf13.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf14.html",
+      "url": "https://pack12durham.org/PhotoBook/pf14.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf13.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf13.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/Toast.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/Toast.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf14.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf13.html",
+      "url": "https://pack12durham.org/PhotoBook/pf13.html",
+      "label": "Previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf14.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf16.html",
+      "url": "https://pack12durham.org/PhotoBook/pf16.html",
+      "label": "Next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf14.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf14.html"
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "original": "images/SpoonNose.jpeg",
+      "url": "https://pack12durham.org/PhotoBook/images/SpoonNose.jpeg",
+      "label": "Displayed photo (change the src path in the HTML)",
+      "page": "https://pack12durham.org/PhotoBook/pf16.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf14.html",
+      "url": "https://pack12durham.org/PhotoBook/pf14.html",
+      "label": "previous image Previous Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf16.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "pf1.html",
+      "url": "https://pack12durham.org/PhotoBook/pf1.html",
+      "label": "next image Next Photo",
+      "page": "https://pack12durham.org/PhotoBook/pf16.html"
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "original": "../index.html",
+      "url": "https://pack12durham.org/index.html",
+      "label": "home Home",
+      "page": "https://pack12durham.org/PhotoBook/pf16.html"
+    }
+  ],
+  "pdf_destinations": [
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://my.scouting.org/online-registration/939c9e92-43c9-4ba5-b37b-fcf0c5848bb9/applicant-type",
+      "url": "https://my.scouting.org/online-registration/939c9e92-43c9-4ba5-b37b-fcf0c5848bb9/applicant-type",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/RegistrationInstructions_2024_08_04.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/training/youth-protection/",
+      "url": "https://www.scouting.org/training/youth-protection/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/RegistrationInstructions_2024_08_04.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://advancements.scouting.org/login",
+      "url": "https://advancements.scouting.org/login",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://advancements.scouting.org/login)",
+      "url": "https://advancements.scouting.org/login)",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://cubscoutideas.com/",
+      "url": "https://cubscoutideas.com/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://hovc.org/cub-scout-required-and-elective-adventures/",
+      "url": "https://hovc.org/cub-scout-required-and-elective-adventures/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://my.scouting.org/",
+      "url": "https://my.scouting.org/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://my.scouting.org/.",
+      "url": "https://my.scouting.org/.",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://scoutermom.com/",
+      "url": "https://scoutermom.com/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://scoutermom.com/.",
+      "url": "https://scoutermom.com/.",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.boyscouttrail.com/",
+      "url": "https://www.boyscouttrail.com/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/programs/cub-scouts/adventures/",
+      "url": "https://www.scouting.org/programs/cub-scouts/adventures/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org/",
+      "url": "https://www.scoutshop.org/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org/.",
+      "url": "https://www.scoutshop.org/.",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.ultimatescouts.com/",
+      "url": "https://www.ultimatescouts.com/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/DenLeaderHelp2026_08_28.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://pack12durham.org/",
+      "url": "https://pack12durham.org/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/FAQ_EN_2026_08_24.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/programs/cub-scouts/",
+      "url": "https://www.scouting.org/programs/cub-scouts/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/FAQ_EN_2026_08_24.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/programs/cub-scouts/",
+      "url": "https://www.scouting.org/programs/cub-scouts/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/FAQ_ES_2026_08_24.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/programs/cub-scouts/.",
+      "url": "https://www.scouting.org/programs/cub-scouts/.",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/FAQ_ES_2026_08_24.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "http://www.pack12durham.org/",
+      "url": "http://www.pack12durham.org/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:committeechair@pack12durham.org",
+      "url": "mailto:committeechair@pack12durham.org",
+      "label": "PDF page 2",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "PDF page 2",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/training/safeguarding-youth/",
+      "url": "https://www.scouting.org/training/safeguarding-youth/",
+      "label": "PDF page 3",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "http://www.pack12durham.org/",
+      "url": "http://www.pack12durham.org/",
+      "label": "PDF page 4",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "http://www.scoutshop.org/",
+      "url": "http://www.scoutshop.org/",
+      "label": "PDF page 4",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org/",
+      "url": "https://www.scoutshop.org/",
+      "label": "PDF page 5",
+      "page": "https://pack12durham.org/pics/PIP_EN_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "http://www.pack12durham.org/",
+      "url": "http://www.pack12durham.org/",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "PDF page 1",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:committeechair@pack12durham.org",
+      "url": "mailto:committeechair@pack12durham.org",
+      "label": "PDF page 2",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "mailto:cubmaster@pack12durham.org",
+      "url": "mailto:cubmaster@pack12durham.org",
+      "label": "PDF page 2",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scouting.org/training/safeguarding-youth/",
+      "url": "https://www.scouting.org/training/safeguarding-youth/",
+      "label": "PDF page 3",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "http://www.pack12durham.org/",
+      "url": "http://www.pack12durham.org/",
+      "label": "PDF page 4",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org/",
+      "url": "https://www.scoutshop.org/",
+      "label": "PDF page 4",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org",
+      "url": "https://www.scoutshop.org",
+      "label": "PDF page 5",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    },
+    {
+      "tag": "pdf-link",
+      "attribute": "uri",
+      "original": "https://www.scoutshop.org/",
+      "url": "https://www.scoutshop.org/",
+      "label": "PDF page 5",
+      "page": "https://pack12durham.org/pics/PIP_ES_2026_08_23.pdf"
+    }
+  ],
+  "notes": "Reachable source pages, including CSS-rendered navigation and all 12 photo pages. Original PDF bytes preserve embedded URI destinations."
+}
