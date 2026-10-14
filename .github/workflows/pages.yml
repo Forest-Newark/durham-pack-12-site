@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Inventory original navigation, downloads, frames, and PDF destinations
+        run: |
+          python -m pip install pypdf==6.1.1
+          python scripts/audit_source.py
       - name: Preserve source assets and build static site
         run: python scripts/build.py
       - name: Check source content and all local destinations
@@ -35,6 +39,7 @@ jobs:
           path: |
             dist/
             screenshots/
+            source-audit/
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3

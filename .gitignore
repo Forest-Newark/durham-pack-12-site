@@ -2,3 +2,4 @@ dist/
 screenshots/
 __pycache__/
 .venv/
+source-audit/

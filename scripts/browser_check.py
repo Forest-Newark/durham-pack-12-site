@@ -27,6 +27,8 @@ try:
             response = page.goto(base, wait_until="networkidle")
             assert response.status == 200
             assert page.title() == "Pack 12 Durham · A Pack for All People"
+            assert page.locator(".adventure-stamp svg").count() == 1
+            assert page.locator(".adventure-stamp").evaluate("(el) => getComputedStyle(el).transform === 'none'")
             assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), f"Overflow at {width}px"
             page.keyboard.press("Tab")
             assert page.locator(".skip-link").evaluate("(el) => el === document.activeElement")
