@@ -61,7 +61,7 @@ python -m playwright install chromium
 python scripts/browser_check.py
 ```
 
-Chromium checks 360, 390, 768, and 1440 pixel viewports for horizontal overflow, image loading, keyboard skip navigation, menu links, and expandable FAQs, and writes full-page screenshots to `screenshots/`. Reduced-motion preferences are respected.
+Chromium checks 360, 390, 768, and 1440 pixel viewports at 2× display density for horizontal overflow, image loading without enlargement beyond native dimensions, mobile text sizes, keyboard skip navigation, menu links, and expandable FAQs, and writes full-page screenshots to `screenshots/`. Reduced-motion preferences are respected. Small-screen body text is at least 16px, navigation has 44px touch targets, welcome graphics stack into one column with full-size links, and decorative badges do not obscure original artwork.
 
 ## Editing
 

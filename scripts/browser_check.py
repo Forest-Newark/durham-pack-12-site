@@ -22,7 +22,7 @@ try:
             options["executable_path"] = os.environ["PACK12_CHROME"]
         browser = playwright.chromium.launch(**options)
         for width in (360, 390, 768, 1440):
-            page = browser.new_page(viewport={"width": width, "height": 960}, reduced_motion="reduce")
+            page = browser.new_page(viewport={"width": width, "height": 960}, device_scale_factor=2, reduced_motion="reduce")
             page.on("pageerror", lambda error: errors.append(str(error)))
             response = page.goto(base, wait_until="networkidle")
             assert response.status == 200
@@ -40,10 +40,15 @@ try:
                 img.scroll_into_view_if_needed()
                 img.evaluate("(el) => el.decode()")
                 assert img.evaluate("(el) => el.complete && el.naturalWidth > 0")
+                assert img.evaluate("(el) => el.getBoundingClientRect().width <= el.naturalWidth + 1"), "Raster image enlarged past native size"
+            if width <= 768:
+                for selector in (".hero-description", ".adventure-card p", ".registration-card > p:not(.fine-print)", ".faq details p", "nav a"):
+                    for element in page.locator(selector).all():
+                        assert element.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize) >= 16"), f"Small text: {selector}"
             page.locator("details").first.locator("summary").click()
             page.evaluate("window.scrollTo(0, 0)")
             page.screenshot(path=str(OUTPUT / f"pack12-{width}.png"), full_page=True)
-            print(f"PASS: {width}px, images, no horizontal overflow, keyboard skip link, navigation, FAQ.")
+            print(f"PASS: {width}px, native-size images, readable mobile text, no horizontal overflow, keyboard skip link, navigation, FAQ.")
             page.close()
         assert not errors, errors
         browser.close()

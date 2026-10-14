@@ -4,3 +4,60 @@
 @media(max-width:760px){.container{width:calc(100% - 40px)}.header-inner{padding-block:20px;flex-direction:column;align-items:flex-start;gap:19px;min-height:0}nav{width:100%;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.73rem}.nav-contact{padding:5px 9px}.nav-contact span{margin-left:6px}.hero{grid-template-columns:1fr;padding-block:43px 38px;gap:28px}h1{font-size:clamp(2.8rem,8vw,4.2rem)}.hero-copy{max-width:580px}.hero-note{margin-top:25px}.hero-art{max-width:500px;width:100%;justify-self:center}.hero-image-wrap{min-height:260px;border-radius:100px 100px 6px 6px}.hero-image-wrap img{max-height:300px}.adventure-stamp{right:8px;bottom:37px}.facts-grid{grid-template-columns:1fr 1fr}.facts-grid>div{padding:22px 15px 22px 0}.facts-grid>div+div{padding-left:17px}.facts-grid>div:nth-child(3){border-left:0;border-top:1px solid var(--line);padding-left:0}.fact-cta{padding:24px 18px}.fact-cta span{top:25px;right:20px}.section{padding-block:55px}.section-heading{display:block;margin-bottom:28px}.section-heading>p{max-width:500px;margin-top:20px}.adventure-grid{grid-template-columns:1fr}.adventure-card{display:grid;grid-template-columns:130px 1fr;column-gap:22px;padding:20px}.activity-art{grid-row:1/4;margin:0;height:100%;min-height:150px}.activity-art svg{height:auto}.adventure-card h3{font-size:1.55rem}.adventure-card .card-number{margin-bottom:10px}.meeting-section{padding-block:50px}.meeting-grid{grid-template-columns:1fr;gap:30px}.meeting-card{padding:27px}.join-grid{grid-template-columns:1fr}.welcome-art{gap:15px}.welcome-art figure{padding:15px}.contact-section{padding-block:45px}.contact-grid{grid-template-columns:1fr;gap:15px}.contact-links strong{font-size:1rem}.footer-inner{flex-wrap:wrap}.footer-inner p{width:100%;order:3}.topline{font-size:.61rem}.topline .container{gap:15px}.footer-note{font-size:.6rem}}
 @media(max-width:400px){.container{width:calc(100% - 32px)}.topline .container{display:block}.topline span{display:none}nav{gap:10px}nav a{font-size:.68rem}.adventure-card{grid-template-columns:1fr}.activity-art{grid-row:auto;height:130px;min-height:0;margin-bottom:20px}.activity-art svg{height:120px}.welcome-art{grid-template-columns:1fr}.registration-card,.fall-card{padding:24px}.registration-card .button{padding-inline:15px;gap:10px;font-size:.75rem}.contact-links strong{font-size:.88rem}.facts-grid strong{font-size:.79rem}.facts-grid div>span:last-child{font-size:.65rem}.actions{gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+
+/* Readability: keep important text at a comfortable size and preserve native image detail. */
+:root{--muted:#425650}
+nav{font-size:.9rem}
+.brand small{font-size:.75rem;letter-spacing:.08em}
+.eyebrow,.card-number,.fact-label{font-size:.75rem;letter-spacing:.09em}
+.hero-description,.section-heading>p,.adventure-card p,
+.meeting-grid>div:first-child>p:not(.eyebrow),.registration-card>p,.fall-card>p,
+.faq details p,.contact-grid p:not(.eyebrow){font-size:1rem}
+.button,.text-link,.facts-grid strong,.fact-cta,.faq summary{font-size:.95rem}
+.hero-note,.image-caption,.facts-grid div>span:last-child,
+.meeting-card dl>div,.meeting-card small,.registration-card .fine-print,
+.welcome-art figcaption,.footer-inner p,.footer-inner>a:last-child,.footer-note{font-size:.875rem}
+.meeting-card dt,.contact-links span:first-child{font-size:.8rem}
+.topline{font-size:.8rem}
+.hero-image-wrap img{width:auto;max-width:100%}
+.welcome-art img{max-width:100%;width:auto}
+.welcome-art figure>a{display:grid;place-items:center;width:100%;border-radius:3px}
+.welcome-art figcaption{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.welcome-art figcaption a{font-weight:650;text-decoration:underline}
+.footer-inner .brand small{font-size:.75rem}
+@media(max-width:1000px){nav{font-size:1rem;gap:18px}.header-inner{flex-wrap:wrap;padding-block:20px;gap:20px}.brand small{font-size:.75rem}}
+@media(max-width:760px){
+  body{line-height:1.7}
+  nav{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:1rem}
+  nav a{font-size:1rem;min-height:44px;display:flex;align-items:center}
+  .nav-contact{padding:0;border:0;border-radius:0;justify-content:space-between}
+  .topline{font-size:.8rem}
+  .hero-description{font-size:1.0625rem}
+  .hero-image-wrap{min-height:0;padding:28px 18px;border-radius:70px 70px 6px 6px}
+  .hero-art{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding-bottom:0}
+  .hero-image-wrap{grid-column:1/-1}
+  .adventure-stamp{position:static;grid-column:2;grid-row:2;transform:none;width:104px;height:104px;margin:0}
+  .image-caption{grid-column:1;grid-row:2;font-size:.875rem;margin:0}
+  .adventure-grid{gap:20px}
+  .adventure-card{display:block;padding:24px}
+  .activity-art{height:150px;min-height:0;margin-bottom:22px}
+  .activity-art svg{height:135px}
+  .facts-grid{grid-template-columns:1fr}
+  .facts-grid>div,.facts-grid>div+div,.facts-grid>div:nth-child(3){padding:20px 0;border-left:0;border-top:1px solid var(--line)}
+  .facts-grid>div:first-child{border-top:0}
+  .facts-grid strong{font-size:1.0625rem}
+  .facts-grid div>span:last-child{font-size:.9375rem}
+  .fact-cta{font-size:1rem;padding:22px}
+  .fact-cta br{display:none}
+  .fact-cta span{top:23px;right:22px}
+  .welcome-art{grid-template-columns:1fr;gap:24px}
+  .welcome-art figure{padding:24px}
+  .welcome-art img{max-height:none}
+  .welcome-art figcaption{font-size:1rem;margin-top:20px;flex-wrap:wrap}
+  .registration-card .button{font-size:.95rem;padding-inline:18px;gap:14px}
+  .registration-card .file-type{font-size:.75rem}
+  .contact-links strong{font-size:1rem;line-height:1.6}
+  .contact-links a{min-height:90px}
+  .footer-inner{align-items:flex-start}
+  .footer-note{font-size:.875rem}
+}
