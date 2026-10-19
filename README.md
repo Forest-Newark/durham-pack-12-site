@@ -1,78 +1,74 @@
 # Durham Pack 12 website
 
-A modern, responsive GitHub Pages proof of concept for Pack 12 in Durham, NC. Plain HTML and CSS, with no runtime JavaScript, tracking, or frontend dependencies.
+**Updating the site? [Open the browser editor](https://forest-newark.github.io/durham-pack-12-site/edit/) and follow the [volunteer guide](UPDATE-THE-SITE.md). No HTML, CSS, JavaScript, or software installation needed.**
 
-## Local Chrome preview
+Change form fields → download **site.json** → upload it to GitHub’s **content** folder → commit. The website rebuilds and publishes automatically after checks pass. Repository permission is required to publish. The form itself never publishes or asks for credentials.
 
-Requires Python 3.11 or newer and internet for the initial asset download:
+## What volunteers can update
+
+- Meeting day, time, season, address, and directions (one shared source).
+- Contact email addresses, welcome text, headings, activity descriptions, FAQs.
+- Events with date pickers, local times, locations, descriptions, and optional links.
+- Calendars, parent guides, leader resources, bilingual document links.
+- About Cub Scouting content and resource destinations.
+
+All routine changes live in **content/site.json**. The editor writes this file so volunteers need not edit JSON. New documents can be uploaded to **uploads/**. Dates are sorted automatically; past events are retained separately after the next daily rebuild. No upcoming dates are invented.
+
+## Project structure
+
+| Location | Purpose |
+| --- | --- |
+| content/site.json | Volunteer-managed content |
+| uploads/ | New PDFs and images |
+| edit/ | Browser form editor |
+| UPDATE-THE-SITE.md | Volunteer publishing and troubleshooting guide |
+| templates/ | Developer-maintained page layouts |
+| styles.css | Site design |
+| scripts/content.py | Safe rendering and plain-language validation |
+| PhotoBook/ | Original photo routes, images referenced by the build |
+| content/source-inventory.json | Original migration inventory |
+
+## Build and preview
+
+Python 3.11+, no third-party packages for validation/rendering/build:
 
 ```sh
+python scripts/test_content.py
 python scripts/build.py
 python scripts/check.py
 python -m http.server 8000 --directory dist
 ```
 
-Open http://localhost:8000 in Chrome. For an immediate preview without downloading assets, run `python scripts/local_preview.py` and open `preview/index.html` in Chrome. All modern HTML pages work locally; images and PDFs load from the original host. The full build includes all original images, PDFs, and redesigned photo pages. Open `dist/preview.html` directly for a single-file homepage preview; that file uses original-site images and document destinations and needs internet. Use the full build to review the redesigned photo and resource pages.
+Open http://localhost:8000/ and http://localhost:8000/edit/. For a quick preview with original-host images, run `python scripts/local_preview.py`. To use the form editor, serve that preview with `python -m http.server 8000 --directory preview`; opening an HTML file directly cannot fetch the content files.
 
-## GitHub Pages
+Page templates are rendered at build time. The public website still needs no JavaScript for its content, meeting information, dates, or navigation. Only the separate volunteer form editor uses JavaScript. All text is escaped; volunteers enter plain text rather than markup.
 
-1. Merge the proof-of-concept PR into `main`.
-2. Set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
-3. If the first deployment ran before Pages was enabled, run **Check and deploy Pack 12 Pages** from Actions.
+## Deployment
 
-Expected address after successful deployment: https://forest-newark.github.io/durham-pack-12-site/. No custom domain is configured. All internal links support the repository subpath.
+Use **Settings → Pages → Source: GitHub Actions**. The single `pages.yml` workflow validates, builds, checks, and deploys **dist/**. The competing raw-repository deployment workflow is removed so it cannot overwrite the rendered site.
 
-PRs run validation without deployment. The downloadable `pack12-preview` artifact includes the full build, standalone homepage preview, screenshots, source crawl, and link inventory.
+Content changes on main rebuild automatically. PRs validate without deploying. A daily 09:17 UTC rebuild updates past/upcoming date classification; GitHub may delay scheduled runs and disables schedules on inactive public repositories after 60 days. A manual run or new content commit also refreshes dates.
 
-## Full original-site preservation
+Live site: https://forest-newark.github.io/durham-pack-12-site/. The editor will appear at /edit/ after this change is merged and deployed.
 
-Source audited October 14, 2026: https://pack12durham.org/.
+## Original functionality
 
-The audit reads HTML rather than relying on a search engine's text view. That captures the original CSS-rendered navigation as well as ordinary links. The complete reachable site includes the homepage, About Cub Scouting, and 12 photo viewer pages. Both original hostnames and the home/index.html aliases are checked.
+All 15 original images and 7 PDFs are still preserved byte-for-byte, including PDF links. Original photo filenames and previous/next/Home routes remain functional. Superseded documents and contacts remain accessible through a clearly dated **Original resources archive**, while volunteers can publish current information in the main page.
 
-- Homepage content, meeting information, email addresses, registration PDF, and Scouting program destination are retained.
-- Calendar: `pics/Calendar_2026_08_19.pdf`.
-- Den leader help: `pics/DenLeaderHelp2026_08_28.pdf`.
-- Parent information: `pics/PIP_EN_2026_08_23.pdf` and `pics/PIP_ES_2026_08_23.pdf`.
-- FAQs: `pics/FAQ_EN_2026_08_24.pdf` and `pics/FAQ_ES_2026_08_24.pdf`.
-- About Cub Scouting retains all three original external resource links, including the exact leader-book URL.
-- All 12 photo viewer routes keep their original `PhotoBook/pf*.html` filenames, original photographs, Home links, and original previous/next destinations. A new album overview provides direct access to every photo. Original navigation quirks are retained rather than silently changing their destinations.
-- All 15 original images and 7 original PDFs are downloaded unchanged. PDFs retain their complete content, embedded links, and bilingual pages.
-- The online registration destination found inside the original PDF is also surfaced as a direct homepage link.
+Migration checks no longer require old meeting times, email addresses, or dates to remain on the current homepage. They verify current editable data and original destination availability, preserving exact gallery behavior. Re-auditing the old source site is optional through the manual workflow input; routine content updates do not depend on a fresh crawl of that site.
 
-September 8 and 15, 2026 welcome dates are explicitly historical. The registration guide is dated August 2024, so families are directed to leaders for current costs and instructions. The current resource documents retain their original 2026 publication dates. Older, search-indexed 2024 FAQs and the 2025–2026 calendar are not substituted for the current live navigation documents.
+## Checks
 
-`content/source-inventory.json` records the discovered source pages and destinations. The build creates `asset-sources.json` with source URLs, sizes, and SHA-256 hashes. `link-coverage.json` maps every original page link/image to its migrated route.
+`scripts/test_content.py` tests propagation of meeting/contact edits, event ordering and visibility, historical and empty states, invalid dates/times/URLs, text escaping, and uploaded-document links.
 
-## Visual inspiration and readability
-
-References: [Discover Durham](https://www.discoverdurham.com/), [Durham Central Park](https://durhamcentralpark.org/), [Durham Parks & Recreation](https://www.dprplaymore.org/), [Durham Cub Scout Pack 461](https://www.cubpack461.org/), and [Durham Pack 495](https://www.durhampack495.org/).
-
-The original design uses forest green, navy text, warm gold, cream backgrounds, serif headings, and vector illustrations. No reference-site photographs or copy are reused.
-
-Small-screen body text is at least 16px. Navigation has 44px touch targets. Graphics stack vertically and can open at full size. Raster images are never stretched past native dimensions. The “Do Your Best” badge is a large, unrotated SVG with vector lettering. Keyboard skip links, native expandable FAQs, and reduced-motion support are included.
-
-## Validation
-
-`scripts/audit_source.py` crawls the full reachable original navigation, image links, frames, and linked PDFs. It preserves downloaded source bytes, extracts PDF destinations, and records HTTP availability and redirects for external links. A provider that blocks automated requests is reported rather than silently replaced. CI fails on source-fetch issues rather than silently omitting them.
-
-`scripts/check.py` verifies every local link, anchor, legacy page route, original image, original per-page destination, and asset hash. It compares the implementation with both the tracked inventory and a fresh source crawl, so future source additions are caught.
-
-For the full audit and browser checks:
+`scripts/check.py` validates generated pages, local destinations, asset hashes, original routes, and current content. Chromium checks at 360/390/768/1440px also exercise the editor: changing fields, adding an event, exporting a file, validating and rendering it, reporting errors, importing it, and restoring a saved draft.
 
 ```sh
-python -m pip install pypdf==6.1.1 playwright==1.55.0
-python scripts/audit_source.py
-python scripts/build.py
-python scripts/check.py
+python -m pip install playwright==1.55.0
 python -m playwright install chromium
 python scripts/browser_check.py
 ```
 
-Chromium checks phone, tablet, and desktop viewports at 2× display density for horizontal overflow, native-size image rendering, readable text, keyboard navigation, resource downloads, and photo navigation. Screenshots are written to `screenshots/`.
+A fresh original-site audit is available with `pip install pypdf==6.1.1` and `python scripts/audit_source.py`. Build artifacts include screenshots and the full static website.
 
-External links keep their original destinations. Login, registration submissions, and authenticated Scout services remain with their original providers; no credentials or registrations are submitted by the checks.
-
-## Editing
-
-Edit `index.html`, `aboutCubScouting.html`, and `PhotoBook/*.html` for content, and `styles.css` for layout. Rebuild to refresh the original asset copies. Preserve a build artifact if the original site is later retired.
+A downloaded update contains the full content snapshot. Start from the current editor before each update and review GitHub’s diff before committing to avoid overwriting another volunteer’s newer work.

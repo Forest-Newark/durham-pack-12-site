@@ -6,6 +6,7 @@ import hashlib
 import json
 import shutil
 import time
+from content import render_pages, archive_html, load_site, ContentError
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -47,14 +48,20 @@ def download(path):
             time.sleep(2 * (attempt + 1))
 
 def build():
+    pages = render_pages(ROOT)
     DIST.mkdir(exist_ok=True)
-    for path in ("index.html", "aboutCubScouting.html", "styles.css", "favicon.svg", ".nojekyll"):
+    for name, html in pages.items():
+        (DIST / name).write_text(html, encoding="utf-8")
+    (DIST / "original-resources.html").write_text(archive_html(ROOT), encoding="utf-8")
+    shutil.copytree(ROOT / "edit", DIST / "edit", dirs_exist_ok=True)
+    shutil.copytree(ROOT / "uploads", DIST / "uploads", dirs_exist_ok=True)
+    for path in ("styles.css", "favicon.svg", ".nojekyll", "UPDATE-THE-SITE.html"):
         shutil.copyfile(ROOT / path, DIST / path)
     for path in sorted((ROOT / "PhotoBook").glob("*.html")):
         destination = DIST / "PhotoBook" / path.name
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, destination)
-    for path in ("content/source-inventory.json",):
+    for path in ("content/source-inventory.json", "content/site.json", "content/editor-schema.json"):
         destination = DIST / path
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / path, DIST / path)
@@ -72,7 +79,7 @@ def build():
         print(f"Preserved {path}: {len(content):,} bytes")
     (DIST / "asset-sources.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     # This portable preview uses the original asset URLs and can be opened directly in Chrome.
-    preview = (ROOT / "index.html").read_text(encoding="utf-8")
+    preview = pages["index.html"]
     preview = preview.replace('<link rel="stylesheet" href="./styles.css">',
                               "<style>\n" + (ROOT / "styles.css").read_text(encoding="utf-8") + "\n</style>")
     preview = preview.replace('./pics/', ORIGIN + 'pics/')
@@ -86,4 +93,7 @@ def build():
     print("Built dist/ (ready for GitHub Pages).")
 
 if __name__ == "__main__":
-    build()
+    try:
+        build()
+    except ContentError as error:
+        raise SystemExit(f"Please fix your website content: {error}") from None

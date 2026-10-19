@@ -87,6 +87,51 @@ try:
                         assert response.status == 200 and response.body().startswith(b"%PDF-"), asset["path"]
             print(f"PASS: {width}px, sharp SVG badge, native-size images, readable text, navigation, resource PDFs, and gallery.")
             page.close()
+        # Exercise the volunteer editor and a real exported/reimported content file.
+        page = browser.new_page(viewport={"width":390,"height":960})
+        page.on("pageerror", lambda error: errors.append(str(error)))
+        page.goto(base + "edit/index.html")
+        page.locator("#download").wait_for(state="visible")
+        page.wait_for_function("!document.getElementById('download').disabled")
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
+        page.locator("#meetings_time").fill("19:15")
+        page.locator('details[data-section="contacts"] > summary').click()
+        page.locator("#contacts_cubmaster_email").fill("volunteer@example.org")
+        page.locator('details[data-section="events"] button', has_text="Add event").click()
+        event_index = len(json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))["events"])
+        page.locator(f"#events_{event_index}_title").fill("Volunteer preview hike")
+        page.locator(f"#events_{event_index}_date").fill("2027-01-09")
+        page.locator(f"#events_{event_index}_time").fill("09:00")
+        page.locator(f"#events_{event_index}_location").fill("Durham")
+        page.locator(f"#events_{event_index}_description").fill("Bring water.")
+        with page.expect_download() as download_info:
+            page.locator("#download").click()
+        download = download_info.value
+        exported = ROOT / "screenshots" / "editor-export.json"
+        download.save_as(exported)
+        data = json.loads(exported.read_text(encoding="utf-8"))
+        assert data["meetings"]["time"] == "19:15"
+        assert data["events"][-1]["title"] == "Volunteer preview hike"
+        from content import render, validate
+        validate(data,json.loads((ROOT / "content/editor-schema.json").read_text(encoding="utf-8")))
+        output = render((ROOT / "templates/index.html").read_text(encoding="utf-8"),data)
+        assert "7:15 pm" in output and "mailto:volunteer@example.org" in output
+        page.locator("#events_0_date").fill("")
+        page.locator("#download").click()
+        assert "choose a real date" in page.locator("#errors").inner_text()
+        page.locator("details.draft-tools > summary").click()
+        page.locator("#import-file").set_input_files(exported)
+        page.wait_for_function("document.getElementById('status').textContent.includes('imported')")
+        assert page.locator("#meetings_time").input_value() == "19:15"
+        page.locator("#save-draft").click()
+        page.reload()
+        page.wait_for_function("!document.getElementById('download').disabled")
+        page.locator("details.draft-tools > summary").click()
+        page.locator("#restore-draft").click()
+        assert page.locator("#meetings_time").input_value() == "19:15"
+        page.screenshot(path=str(OUTPUT / "volunteer-editor-390.png"), full_page=True)
+        page.close()
+        print("PASS: volunteer editor exports valid content; schedule/contact changes render; event creation, errors, import, and draft restore work.")
         assert not errors, errors
         browser.close()
 finally:
