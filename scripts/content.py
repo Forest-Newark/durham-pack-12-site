@@ -1,5 +1,6 @@
 """Validate volunteer content and render templates. No third-party dependencies."""
-from datetime import date, datetime, timezone
+from datetime import date, datetime
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from html import escape
 from pathlib import Path
 from urllib.parse import urlsplit, urlencode
@@ -105,7 +106,12 @@ def resources_html(rows, about=False):
 
 def events_html(site, today=None):
     # A daily Pages build updates this date classification; dates are local calendar dates.
-    today = today or datetime.now(timezone.utc).date()
+    if today is None:
+        try:
+            today = datetime.now(ZoneInfo("America/New_York")).date()
+        except ZoneInfoNotFoundError:
+            # Windows previews without IANA timezone data use the local calendar.
+            today = datetime.now().date()
     events = sorted((item for item in site["events"] if item["enabled"]), key=lambda item: (item["date"], item["time"], item["title"]))
     future = [item for item in events if date.fromisoformat(item["date"]) >= today]
     past = [item for item in events if date.fromisoformat(item["date"]) < today]
