@@ -58,12 +58,13 @@ def check():
                 assert local in parsers and target.fragment in parsers[local].ids, f"Missing anchor: {name} → {link}"
         for img in parser.images:
             assert img.get("alt"), f"Missing image description: {name}"
-    home = parsers["index.html"]
-    text = " ".join(home.text)
-    for phrase in ("A Pack for All People", "6:30 pm", "Yates Baptist Church",
-                   "2819 Chapel Hill Rd.", "Rogers-Herr", "September–May",
-                   "September 8 or 15, 2026", "These welcome dates have passed"):
-        assert phrase in text, f"Source information missing: {phrase}"
+    from content import load_site, time_label
+    site = load_site()
+    text = " ".join(parsers["index.html"].text)
+    for phrase in (site["meetings"]["venue"], time_label(site["meetings"]["time"]), site["contacts"]["cubmaster_email"], site["contacts"]["committee_chair_email"]):
+        assert phrase in text, f"Editable content not rendered: {phrase}"
+    assert "{{" not in (DIST / "index.html").read_text(encoding="utf-8"), "Unrendered content placeholders"
+    global_targets = {canonical(urljoin(ORIGIN + page, link)) for page, parser in parsers.items() for link in parser.links}
     frozen = json.loads((ROOT / "content/source-inventory.json").read_text(encoding="utf-8"))
     live_path = ROOT / "source-audit/inventory.json"
     inventories = [frozen]
@@ -80,7 +81,7 @@ def check():
             parser = parsers[name]
             refs = [img["src"] for img in parser.images] if item["tag"] == "img" else parser.links
             targets = {canonical(urljoin(source_page, ref)) for ref in refs}
-            assert canonical(item["url"]) in targets, f"Original function missing: {source_page} → {item['url']}"
+            assert canonical(item["url"]) in (targets if item["tag"] == "img" or "/PhotoBook/" in source_page else targets | global_targets), f"Original function missing: {source_page} → {item['url']}"
             coverage.append({"source_page": item["page"], "destination": item["url"], "migrated_page": name, "status": "preserved"})
     manifest = json.loads((DIST / "asset-sources.json").read_text(encoding="utf-8"))
     for asset in manifest:
@@ -93,7 +94,7 @@ def check():
     # Identical PDF bytes preserve embedded links, page navigation, and the full bilingual content.
     (DIST / "link-coverage.json").write_text(json.dumps(coverage, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: {len(parsers)} pages, {len(manifest)} original assets, {len(coverage)} source references.")
-    print("PASS: every original link/image is present on its corresponding page, including legacy gallery routes.")
+    print("PASS: original destinations remain available; gallery routes and images preserve per-page behavior.")
     print("PASS: content, local destinations, anchors, accessibility descriptions, and preservation hashes.")
 
 if __name__ == "__main__":

@@ -1,0 +1,520 @@
+{
+  "type": "object",
+  "properties": {
+    "hero": {
+      "type": "object",
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "title": "eyebrow",
+          "minLength": 1
+        },
+        "heading": {
+          "type": "string",
+          "title": "heading",
+          "multiline": true,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        },
+        "caption": {
+          "type": "string",
+          "title": "caption",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "eyebrow",
+        "heading",
+        "description",
+        "caption"
+      ],
+      "additionalProperties": false
+    },
+    "meetings": {
+      "type": "object",
+      "properties": {
+        "weekday": {
+          "type": "string",
+          "title": "weekday",
+          "minLength": 1
+        },
+        "time": {
+          "type": "string",
+          "title": "time",
+          "format": "time",
+          "minLength": 1,
+          "description": "Local Durham time. Displayed consistently throughout the website."
+        },
+        "frequency": {
+          "type": "string",
+          "title": "frequency",
+          "minLength": 1
+        },
+        "season": {
+          "type": "string",
+          "title": "season",
+          "minLength": 1
+        },
+        "venue": {
+          "type": "string",
+          "title": "venue",
+          "minLength": 1
+        },
+        "street": {
+          "type": "string",
+          "title": "street",
+          "minLength": 1
+        },
+        "city": {
+          "type": "string",
+          "title": "city",
+          "minLength": 1
+        },
+        "landmark": {
+          "type": "string",
+          "title": "landmark",
+          "minLength": 1
+        },
+        "audience": {
+          "type": "string",
+          "title": "audience",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        }
+      },
+      "required": [
+        "weekday",
+        "time",
+        "frequency",
+        "season",
+        "venue",
+        "street",
+        "city",
+        "landmark",
+        "audience",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "registration": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        },
+        "guide_url": {
+          "type": "string",
+          "title": "guide url",
+          "format": "link",
+          "minLength": 1
+        },
+        "guide_note": {
+          "type": "string",
+          "title": "guide note",
+          "multiline": true,
+          "minLength": 1
+        },
+        "online_url": {
+          "type": "string",
+          "title": "online url",
+          "format": "link",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "description",
+        "guide_url",
+        "guide_note",
+        "online_url"
+      ],
+      "additionalProperties": false
+    },
+    "contacts": {
+      "type": "object",
+      "properties": {
+        "cubmaster_email": {
+          "type": "string",
+          "title": "cubmaster email",
+          "format": "email",
+          "minLength": 1
+        },
+        "committee_chair_email": {
+          "type": "string",
+          "title": "committee chair email",
+          "format": "email",
+          "minLength": 1
+        },
+        "heading": {
+          "type": "string",
+          "title": "heading",
+          "multiline": true,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        }
+      },
+      "required": [
+        "cubmaster_email",
+        "committee_chair_email",
+        "heading",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "events_intro": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "title": "heading",
+          "multiline": true,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        },
+        "empty_message": {
+          "type": "string",
+          "title": "empty message",
+          "multiline": true,
+          "minLength": 1
+        }
+      },
+      "required": [
+        "heading",
+        "description",
+        "empty_message"
+      ],
+      "additionalProperties": false
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "title",
+            "minLength": 1
+          },
+          "date": {
+            "type": "string",
+            "title": "date",
+            "format": "date",
+            "minLength": 1,
+            "description": "Choose the event date. Past events are automatically listed under Past events."
+          },
+          "time": {
+            "type": "string",
+            "title": "time",
+            "format": "time",
+            "minLength": 1,
+            "description": "Local Durham time. Displayed consistently throughout the website."
+          },
+          "location": {
+            "type": "string",
+            "title": "location",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "title": "description",
+            "multiline": true,
+            "minLength": 1
+          },
+          "link": {
+            "type": "string",
+            "title": "link",
+            "format": "link"
+          },
+          "enabled": {
+            "type": "boolean",
+            "title": "Show this event"
+          }
+        },
+        "required": [
+          "title",
+          "date",
+          "time",
+          "location",
+          "description",
+          "link",
+          "enabled"
+        ],
+        "additionalProperties": false
+      },
+      "title": "events"
+    },
+    "homepage": {
+      "type": "object",
+      "properties": {
+        "adventures_heading": {
+          "type": "string",
+          "title": "adventures heading",
+          "minLength": 1
+        },
+        "adventures_description": {
+          "type": "string",
+          "title": "adventures description",
+          "minLength": 1
+        },
+        "join_heading": {
+          "type": "string",
+          "title": "join heading",
+          "minLength": 1
+        },
+        "join_description": {
+          "type": "string",
+          "title": "join description",
+          "minLength": 1
+        },
+        "resources_heading": {
+          "type": "string",
+          "title": "resources heading",
+          "minLength": 1
+        },
+        "resources_description": {
+          "type": "string",
+          "title": "resources description",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "adventures_heading",
+        "adventures_description",
+        "join_heading",
+        "join_description",
+        "resources_heading",
+        "resources_description"
+      ],
+      "additionalProperties": false
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "label",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "heading": {
+            "type": "string",
+            "title": "heading",
+            "multiline": true,
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "title": "description",
+            "multiline": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "label",
+          "heading",
+          "description"
+        ],
+        "additionalProperties": false
+      },
+      "title": "activities",
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "faqs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "title": "question",
+            "minLength": 1
+          },
+          "answer": {
+            "type": "string",
+            "title": "answer",
+            "multiline": true,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "question",
+          "answer"
+        ],
+        "additionalProperties": false
+      },
+      "title": "faqs"
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "label",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "title": {
+            "type": "string",
+            "title": "title",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "title": "description",
+            "multiline": true,
+            "minLength": 1
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "title": "label",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "url": {
+                  "type": "string",
+                  "title": "url",
+                  "format": "link",
+                  "minLength": 1,
+                  "description": "Paste a complete https:// link, or use ./uploads/filename.pdf for a document uploaded to this repository."
+                },
+                "language": {
+                  "type": "string",
+                  "title": "language",
+                  "minLength": 1,
+                  "enum": [
+                    "en",
+                    "es"
+                  ]
+                }
+              },
+              "required": [
+                "label",
+                "url",
+                "language"
+              ],
+              "additionalProperties": false
+            },
+            "title": "links"
+          }
+        },
+        "required": [
+          "label",
+          "title",
+          "description",
+          "links"
+        ],
+        "additionalProperties": false
+      },
+      "title": "resources"
+    },
+    "about": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "title": "heading",
+          "multiline": true,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "title": "description",
+          "multiline": true,
+          "minLength": 1
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "title",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "title": "description",
+                "multiline": true,
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "title": "label",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "url": {
+                "type": "string",
+                "title": "url",
+                "format": "link",
+                "minLength": 1,
+                "description": "Paste a complete https:// link, or use ./uploads/filename.pdf for a document uploaded to this repository."
+              }
+            },
+            "required": [
+              "title",
+              "description",
+              "label",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "title": "resources"
+        }
+      },
+      "required": [
+        "heading",
+        "description",
+        "resources"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "hero",
+    "meetings",
+    "registration",
+    "contacts",
+    "events_intro",
+    "events",
+    "homepage",
+    "activities",
+    "faqs",
+    "resources",
+    "about"
+  ],
+  "additionalProperties": false
+}

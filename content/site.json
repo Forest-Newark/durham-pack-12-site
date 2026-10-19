@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "eyebrow": "BIG ADVENTURES START SMALL",
+    "heading": "Find your people.\nFind your adventure.",
+    "description": "New games. New friends. New skills.\nWelcome to Pack 12 — a place for girls and boys in grades K–5 to learn, explore, and grow together.",
+    "caption": "Our pack. Our community. Your next adventure."
+  },
+  "meetings": {
+    "weekday": "Tuesdays",
+    "time": "18:30",
+    "frequency": "First 3 Tuesdays of the month",
+    "season": "September–May",
+    "venue": "Yates Baptist Church",
+    "street": "2819 Chapel Hill Rd.",
+    "city": "Durham",
+    "landmark": "Next to Rogers-Herr Middle School",
+    "audience": "Girls & boys · K–5",
+    "description": "Pack 12 is for girls and boys in kindergarten through fifth grade. Our adventures bring families together right here in Durham, North Carolina."
+  },
+  "registration": {
+    "description": "The registration guide includes instructions in English and Spanish, information about costs, adult registration, and scholarships.",
+    "guide_url": "https://pack12durham.org/RegistrationInstructions_2024_08_04.pdf",
+    "guide_note": "Guide dated August 4, 2024. Ask pack leaders to confirm current fees and registration details.",
+    "online_url": "https://my.scouting.org/online-registration/939c9e92-43c9-4ba5-b37b-fcf0c5848bb9/applicant-type"
+  },
+  "contacts": {
+    "cubmaster_email": "cubmaster@pack12durham.org",
+    "committee_chair_email": "committeechair@pack12durham.org",
+    "heading": "Big questions.\nFriendly people.",
+    "description": "Would you like more information now?\nOur pack leaders would love to hear from you."
+  },
+  "events_intro": {
+    "heading": "Come join the adventure.",
+    "description": "Meetings, outings, and ways to get involved. Contact the pack to confirm your visit.",
+    "empty_message": "No upcoming events are posted yet. Contact the pack to find out when to visit."
+  },
+  "events": [
+    {
+      "title": "Fall 2026 welcome",
+      "date": "2026-09-08",
+      "time": "18:30",
+      "location": "Yates Baptist Church, 2819 Chapel Hill Rd., Durham",
+      "description": "Welcome for girls and boys in grades K–5.",
+      "link": "",
+      "enabled": true
+    },
+    {
+      "title": "Fall 2026 welcome",
+      "date": "2026-09-15",
+      "time": "18:30",
+      "location": "Yates Baptist Church, 2819 Chapel Hill Rd., Durham",
+      "description": "Welcome for girls and boys in grades K–5.",
+      "link": "",
+      "enabled": true
+    }
+  ],
+  "homepage": {
+    "adventures_heading": "More than a meeting.\nA world to discover.",
+    "adventures_description": "What do Cub Scouts do? We turn everyday moments into opportunities for new games, new friends, and new skills.",
+    "join_heading": "There’s a place\nfor you in Pack 12.",
+    "join_description": "Ready to get started? Read the pack’s registration information or reach out to our leaders with your questions.",
+    "resources_heading": "Everything your\nfamily needs.",
+    "resources_description": "Calendar, parent information, FAQs, and leader resources for Pack 12 families."
+  },
+  "activities": [
+    {
+      "label": "01 / GET OUTSIDE",
+      "heading": "A little fresh air.\nA lot of discovery.",
+      "description": "Hiking, archery, and camping. Explore the outdoors and try something new with the pack."
+    },
+    {
+      "label": "02 / TRY SOMETHING NEW",
+      "heading": "Small steps.\nGrowing confidence.",
+      "description": "Cooking, life skills, and character development. Learn by doing, one adventure at a time."
+    },
+    {
+      "label": "03 / BELONG TOGETHER",
+      "heading": "New friends.\nFavorite memories.",
+      "description": "Family activities, games, and s’mores. Make room for fun and friendships along the way."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Who can join Pack 12?",
+      "answer": "Pack 12 is for girls and boys in grades K–5. “A Pack for All People” is our welcome."
+    },
+    {
+      "question": "When and where do you meet?",
+      "answer": "See the meeting information above for our current schedule and location. Contact the pack to confirm a visit."
+    },
+    {
+      "question": "Where do I find registration details?",
+      "answer": "Use the registration information and online registration links above. Contact the pack to confirm current costs and instructions."
+    }
+  ],
+  "resources": [
+    {
+      "label": "PLAN YOUR ADVENTURE",
+      "title": "Pack calendar",
+      "description": "Calendar published August 19, 2026. Check with pack leaders for schedule changes.",
+      "links": [
+        {
+          "label": "Open the pack calendar",
+          "url": "./pics/Calendar_2026_08_19.pdf",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "label": "FOR FAMILIES",
+      "title": "Parent information",
+      "description": "The pack’s parent information guides, published August 23, 2026.",
+      "links": [
+        {
+          "label": "Parent guide · English",
+          "url": "./pics/PIP_EN_2026_08_23.pdf",
+          "language": "en"
+        },
+        {
+          "label": "Información para padres · Español",
+          "url": "./pics/PIP_ES_2026_08_23.pdf",
+          "language": "es"
+        }
+      ]
+    },
+    {
+      "label": "YOUR QUESTIONS, ANSWERED",
+      "title": "Pack FAQs",
+      "description": "Full pack FAQs in English and Spanish, published August 24, 2026.",
+      "links": [
+        {
+          "label": "Pack FAQs · English",
+          "url": "./pics/FAQ_EN_2026_08_24.pdf",
+          "language": "en"
+        },
+        {
+          "label": "Preguntas frecuentes · Español",
+          "url": "./pics/FAQ_ES_2026_08_24.pdf",
+          "language": "es"
+        }
+      ]
+    },
+    {
+      "label": "HELP THE PACK GROW",
+      "title": "For leaders",
+      "description": "The pack’s den leader help sheet and Cub Scouting resources.",
+      "links": [
+        {
+          "label": "Den leader help",
+          "url": "./pics/DenLeaderHelp2026_08_28.pdf",
+          "language": "en"
+        },
+        {
+          "label": "About Cub Scouting & leadership",
+          "url": "./aboutCubScouting.html",
+          "language": "en"
+        }
+      ]
+    }
+  ],
+  "about": {
+    "heading": "About Cub Scouting",
+    "description": "Explore the program and leadership resources linked from the original Pack 12 website.",
+    "resources": [
+      {
+        "title": "The Cub Scout Program",
+        "description": "Learn more about the Cub Scout program and what Scouts earn.",
+        "label": "The Cub Scout Program",
+        "url": "https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/"
+      },
+      {
+        "title": "Pack leadership",
+        "description": "Find the original pack leadership and committee resources.",
+        "label": "Pack Leadership Resources",
+        "url": "https://www.scouting.org/programs/cub-scouts/leader-resources/pack-committee-resources/"
+      },
+      {
+        "title": "Cub Scout Leader Book",
+        "description": "Download the leader book linked by Pack 12.",
+        "label": "Cub Scout Leader Book download",
+        "url": "https://filestore.scouting.org/filestore/cubscouts/pdf/33221(24)%20Cub%20Scout%20Leader%20Book.pdf?_gl=1*dkuejv*_gcl_au*NzYyMDYyNDUwLjE3NjI4Mjg1NDg.*_ga*MTE2NDE0MTQwNC4xNjYzMzMxMDE2*_ga_20G0JHESG4*czE3Njk1NDQ1MzEkbzQ5MCRnMSR0MTc2OTU0NTAyNSRqMiRsMCRoMA..&_ga=2.94821978.795068935.1769446632-1164141404.1663331016"
+      }
+    ]
+  }
+}

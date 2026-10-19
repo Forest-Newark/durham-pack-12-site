@@ -99,3 +99,6 @@ nav{font-size:.9rem}
 @media(max-width:760px){.resource-grid{grid-template-columns:1fr;gap:22px}.resource-card{padding:24px}.album-teaser{grid-template-columns:1fr;gap:25px;padding:24px}.photo-grid{grid-template-columns:1fr}.photo-tile img{max-height:350px}.gallery-photo img{max-height:none}.photo-controls{display:flex}.photo-controls .button{flex:1 1 calc(50% - 15px);justify-content:center}.resource-link{line-height:1.6}}
 
 @media(max-width:760px){.photo-controls .button{font-size:1rem}}
+
+/* Volunteer-managed events. */
+.event-empty{padding:24px;border:1px solid var(--line);border-radius:6px;font-size:1rem;color:var(--muted)}.past-events{margin-top:26px}.past-events>summary{font-size:1rem;font-weight:650;cursor:pointer;min-height:44px}.past-events .resource-grid{margin-top:20px}.event-card time{font-weight:650}
