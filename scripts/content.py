@@ -157,5 +157,10 @@ def archive_html(root=ROOT):
     for item in inventory["links"]:
         if item["tag"] in ("a", "area"):
             urls.setdefault(item["url"], item["label"] or urlsplit(item["url"]).path.rsplit("/", 1)[-1])
-    items = "".join(f'<li><a href="{escape(url, quote=True)}">{escape(label or url)}</a></li>' for url, label in sorted(urls.items()))
+    def href(url):
+        part = urlsplit(url)
+        if part.hostname in ("pack12durham.org", "www.pack12durham.org"):
+            return "./" + (part.path.lstrip("/") or "index.html") + ("?" + part.query if part.query else "") + ("#" + part.fragment if part.fragment else "")
+        return url
+    items = "".join(f'<li><a href="{escape(href(url), quote=True)}">{escape(label or url)}</a></li>' for url, label in sorted(urls.items()))
     return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Original resources archive · Pack 12</title><link rel="stylesheet" href="./styles.css"></head><body><main class="container section"><h1>Original resources archive</h1><p>Historical destinations from the original site, audited October 14, 2026. For current contacts, dates, and resources, use the main website.</p><p><a href="./index.html">Current Pack 12 website →</a></p><ul>' + items + '</ul></main></body></html>'

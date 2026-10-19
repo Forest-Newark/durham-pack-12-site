@@ -10,6 +10,7 @@ ORIGIN = "https://pack12durham.org/"
 css = (ROOT / "styles.css").read_text(encoding="utf-8")
 pages = render_pages(ROOT)
 pages["original-resources.html"] = archive_html(ROOT)
+pages["UPDATE-THE-SITE.html"] = (ROOT / "UPDATE-THE-SITE.html").read_text(encoding="utf-8")
 for path in (ROOT / "PhotoBook").glob("*.html"):
     pages[path.relative_to(ROOT).as_posix()] = path.read_text(encoding="utf-8")
 for relative, content in pages.items():
